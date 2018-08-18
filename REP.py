@@ -1,8 +1,11 @@
-# Real Estate Price Predictor using Linear Regression model v0.1.1
+# Real Estate Price Predictor using Linear Regression model v0.2.3
 # Created by Shahbaz Khan, August 17th, 2018
 import numpy as np
 import pandas as pd
 import seaborn as sns
+import Tkinter as tk
+import matplotlib.pyplot as plt
+
 # Importing the CSV file
 houses = pd.read_csv('housingdata.csv')
 
@@ -29,6 +32,8 @@ coeff_df = pd.DataFrame()
 predictions = lm.predict(X_test)
 residue = y_test - predictions
 sns.distplot(residue)
+plt.show()
+
 
 # Application
 print('Hello there, to find out the approximate value of the house you are looking for, please answer the following questions to the best of your knowledge.')
